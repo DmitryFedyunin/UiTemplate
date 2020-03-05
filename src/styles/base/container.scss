@@ -1,0 +1,58 @@
+.page {
+
+  @include below('small') {
+    padding: 0 20px;
+  }
+
+  @include at('small') {
+    padding: 0 60px;
+  }
+}
+
+.page[id=page-wrapp]:after {
+  content: '';
+  display: block;
+}
+
+.footer, page[id=page-wrapp]:after {
+  height: 10px;
+}
+
+.page[id=page-wrapp] {
+  min-height: 90%;
+  margin-bottom: -10px;
+}
+
+.container {
+
+  margin: auto;
+  max-width: 1360px;
+  position: relative;
+}
+
+.col-2 {
+  display: grid;
+}
+
+.col-6 {
+  grid-column: 6/8;
+  grid-row: 1;
+
+  @include below('small') {
+    grid-column: 1/1;
+    margin-left: -37px;
+  }
+}
+
+.col-8 {
+  grid-column: 3/9;
+
+}
+
+.col-9 {
+
+}
+
+.col-10 {
+
+}
